@@ -27,12 +27,18 @@ function create_account() {
 	
 }
 
-echo "\e[96m---------------------------\n";
-echo "|                         |\n";
-echo "|     NordVpn Premium     |\n";
-echo "|       PremiumKita       |\n";
-echo "|                         |\n";
-echo "---------------------------\n";
+echo "\e[96m";
+echo "";
+echo " _____   _____   _____  _     _  _  _     _  _     _  _   _  _  ________   __
+|  __ \ |  __ \ |  ___|| \   / || || |   | || \   / || | / || ||___  ___| /  \
+| |__) || |__) || |___ |  \_/  || || |   | ||  \_/  || |/ / | |   |  |   / /\ \
+|  ___/ |  __ / |  ___|| |\_/| || || |   | || |\_/| ||   |  | |   |  |  / ____ \
+| |     | | \ \ | |___ | |   | || || |___| || |   | || |\ \ | |   |  | / /    \ \
+|_|     |_|  \_\|_____||_|   |_||_||_______||_|   |_||_| \_||_|   |__|/_/      \_\
+";
+echo "===================================================================================\n";
+echo "                        NORDVPN PREMIUM ACCOUNT CREATOR                            \n";
+echo "===================================================================================\n";
 
 
 echo "\e[93mJumlah Akun : ";
@@ -59,6 +65,9 @@ for ($i = 0; $i < $banyak ; $i++) {
 		$fh = fopen("result.txt", "a");
 		fwrite($fh, "premiumkita".number(6)."@gmail.com | premiumkita123 [Expired ".date('d M Y', strtotime('+1095 days', strtotime(date('d M Y'))))."] \n\r");
 		fclose($fh);
+	} else {
+		echo "\e[91m[GAGAL] Layanan Premium Tidak Tersedia\n";
+		exit();
 	}
 }
 echo "====================================================\n";
